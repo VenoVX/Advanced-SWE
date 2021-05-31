@@ -17,6 +17,7 @@ public class CSVReader {
 
     public ArrayList<String[]> read() {
         ArrayList<String[]> dataList = new ArrayList<String []>();
+        String row;
         try {
             while ((row = this.br.readLine()) != null) {
                 dataList.add(row.split(","));

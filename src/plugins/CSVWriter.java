@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class CSVWriter(){
+public class CSVWriter {
     private BufferedWriter bw;
     private StringBuilder sb;
     private FileWriter fw;
@@ -14,10 +14,11 @@ public class CSVWriter(){
     public CSVWriter(String name){
         try {
             this.bw = new BufferedWriter(new FileWriter(name));
-        } catch (IOException e) {
+        }catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     public void wirteDataToFile(ArrayList<String []> data)  {
         this.sb = new StringBuilder();
        for(String[] dataArray : data){
@@ -35,3 +36,4 @@ public class CSVWriter(){
     }
 
 }
+
